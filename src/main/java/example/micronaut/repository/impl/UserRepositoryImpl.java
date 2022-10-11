@@ -50,16 +50,12 @@ public class UserRepositoryImpl implements UserRepository {
     }
 
     @Override
-    @Transactional
     @TransactionalAdvice
-    public void update(Long id, User user) {
-        User userToUpdate = entityManager.find(User.class, id);
-        if (null != userToUpdate) {
-            userToUpdate.setFirstName(user.getFirstName());
-            userToUpdate.setLastName(user.getLastName());
-            userToUpdate.setEmailId(user.getEmailId());
-        } else {
-            throw new RuntimeException("No such user available");
-        }
+    @Transactional
+    public int update(Long id, User user) {
+        return entityManager.createQuery("UPDATE User g SET firstName = :firstName where id = :id")
+                .setParameter("firstName", user.getFirstName())
+                .setParameter("id", id)
+                .executeUpdate();
     }
 }

@@ -2,7 +2,6 @@ package example.micronaut.controller;
 
 import example.micronaut.entity.User;
 import example.micronaut.repository.UserRepository;
-import example.micronaut.repository.impl.UserRepositoryImpl;
 import io.micronaut.http.annotation.*;
 import io.micronaut.scheduling.TaskExecutors;
 import io.micronaut.scheduling.annotation.ExecuteOn;
@@ -14,18 +13,18 @@ import java.util.Optional;
 @Controller("/users")
 public class UserController {
 
-    protected final UserRepositoryImpl userRepository;
+    private UserRepository userRepository;
 
-    public UserController(UserRepositoryImpl userRepository) {
+    public UserController(UserRepository userRepository) {
         this.userRepository = userRepository;
     }
 
-    @Get("/getAllUsers")
+    @Get("/get")
     public List<User> getUsers() {
         return userRepository.findAll();
     }
 
-    @Get("/getUserById/{id}")
+    @Get("/get/{id}")
     public Optional<User> getUser(Long id) {
         return userRepository.findById(id);
     }
