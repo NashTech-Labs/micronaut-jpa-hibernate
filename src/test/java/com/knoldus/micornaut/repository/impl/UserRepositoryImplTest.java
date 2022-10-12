@@ -1,7 +1,7 @@
-package example.micronaut.repository.impl;
+package com.knoldus.micornaut.repository.impl;
 
-import example.micronaut.entity.User;
-import example.micronaut.repository.UserRepository;
+import com.knoldus.micornaut.entity.User;
+import com.knoldus.micornaut.repository.UserRepository;
 import io.micronaut.http.client.BlockingHttpClient;
 import io.micronaut.http.client.HttpClient;
 import io.micronaut.http.client.annotation.Client;

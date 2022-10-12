@@ -1,4 +1,4 @@
-package example.micronaut.entity;
+package com.knoldus.micornaut.entity;
 
 import javax.persistence.*;
 import java.io.Serializable;

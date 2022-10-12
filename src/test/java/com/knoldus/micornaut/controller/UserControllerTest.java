@@ -1,9 +1,9 @@
-package example.micronaut.controller;
+package com.knoldus.micornaut.controller;
 
 
-import example.micronaut.entity.User;
-import example.micronaut.repository.UserRepository;
-import example.micronaut.repository.impl.UserRepositoryImpl;
+import com.knoldus.micornaut.entity.User;
+import com.knoldus.micornaut.repository.UserRepository;
+import com.knoldus.micornaut.repository.impl.UserRepositoryImpl;
 import io.micronaut.http.HttpRequest;
 import io.micronaut.http.HttpResponse;
 import io.micronaut.http.HttpStatus;

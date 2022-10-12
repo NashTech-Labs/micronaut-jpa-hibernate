@@ -1,7 +1,7 @@
-package example.micronaut.controller;
+package com.knoldus.micornaut.controller;
 
-import example.micronaut.entity.User;
-import example.micronaut.repository.UserRepository;
+import com.knoldus.micornaut.entity.User;
+import com.knoldus.micornaut.repository.UserRepository;
 import io.micronaut.http.annotation.*;
 import io.micronaut.scheduling.TaskExecutors;
 import io.micronaut.scheduling.annotation.ExecuteOn;

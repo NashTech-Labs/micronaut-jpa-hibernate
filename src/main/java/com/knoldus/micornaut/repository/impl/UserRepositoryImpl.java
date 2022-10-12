@@ -1,7 +1,7 @@
-package example.micronaut.repository.impl;
+package com.knoldus.micornaut.repository.impl;
 
-import example.micronaut.entity.User;
-import example.micronaut.repository.UserRepository;
+import com.knoldus.micornaut.entity.User;
+import com.knoldus.micornaut.repository.UserRepository;
 import io.micronaut.transaction.annotation.ReadOnly;
 import io.micronaut.transaction.annotation.TransactionalAdvice;
 import jakarta.inject.Singleton;

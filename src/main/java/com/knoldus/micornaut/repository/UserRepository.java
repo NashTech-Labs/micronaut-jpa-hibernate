@@ -1,6 +1,6 @@
-package example.micronaut.repository;
+package com.knoldus.micornaut.repository;
 
-import example.micronaut.entity.User;
+import com.knoldus.micornaut.entity.User;
 
 import java.util.List;
 import java.util.Optional;
